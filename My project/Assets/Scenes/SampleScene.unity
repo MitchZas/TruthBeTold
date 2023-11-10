@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 659079297}
   - component: {fileID: 659079301}
   m_Layer: 6
-  m_Name: Sphere
+  m_Name: Baseball
   m_TagString: InteractObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
