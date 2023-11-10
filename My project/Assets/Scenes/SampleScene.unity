@@ -457,8 +457,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Baseball
-  itemextraInfo: 'This is the baseball that my grandfather caught during the 1962
-    World Series '
+  itemextraInfo: This is the baseball that my grandfather caught during the 1962
+    World Series, it's one of his last memories with his father. He said that he
+    caught this in Game 4 when Tom Haller hit a homerun for the San Francisco Giants.
+    Being a Yankee fan, this was less than ideal but hey, it was a homerun ball from
+    the World Series, who wouldn't like that?
   inspectController: {fileID: 479566058}
 --- !u!1 &705507993
 GameObject:
