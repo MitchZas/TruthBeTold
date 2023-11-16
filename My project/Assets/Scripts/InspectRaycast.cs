@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InspectRaycast : MonoBehaviour
 {
@@ -11,11 +13,12 @@ public class InspectRaycast : MonoBehaviour
 
    [SerializeField] private Image crosshair;
    private bool isCrosshairActive;
-   private bool doOnce;
    
+   private bool doOnce;
    
    private void Update() 
    {
+        
         RaycastHit hit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
@@ -38,7 +41,7 @@ public class InspectRaycast : MonoBehaviour
                 {
                     raycastedObj.ShowExtraInfo();
                     // Play Shannon Audio clip
-                    FindObjectOfType<AudioManager>().Play("ShannonMitchBaseball");
+                    FindObjectOfType<AudioManager>().Play("ShannonMitchBaseball");  
                 }
             }
         }
