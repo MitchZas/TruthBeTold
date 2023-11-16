@@ -12,7 +12,8 @@ public class InspectRaycast : MonoBehaviour
    [SerializeField] private Image crosshair;
    private bool isCrosshairActive;
    private bool doOnce;
-
+   
+   
    private void Update() 
    {
         RaycastHit hit;
@@ -27,6 +28,7 @@ public class InspectRaycast : MonoBehaviour
                     raycastedObj = hit.collider.gameObject.GetComponent<ObjectController>();
                     raycastedObj.ShowObjectName();
                     CrosshairChange(true);
+                    
                 }
 
                 isCrosshairActive = true;
@@ -35,6 +37,8 @@ public class InspectRaycast : MonoBehaviour
                 if(Input.GetMouseButtonDown(0))
                 {
                     raycastedObj.ShowExtraInfo();
+                    // Play Shannon Audio clip
+                    FindObjectOfType<AudioManager>().Play("ShannonMitchBaseball");
                 }
             }
         }
