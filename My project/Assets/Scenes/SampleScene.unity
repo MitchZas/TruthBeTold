@@ -1755,7 +1755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: ShannonMitchBaseball
-    clip: {fileID: 8300000, guid: c9c3df7d38719cc4997375511cdaddf0, type: 3}
+    clip: {fileID: 8300000, guid: f29ad7935515c974485c6153c56495a7, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
