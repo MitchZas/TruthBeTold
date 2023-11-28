@@ -16,6 +16,9 @@ public class InspectRaycast : MonoBehaviour
    private bool isCrosshairActive;
    
    private bool doOnce;
+
+   LevelLoader levelLoaderScript;
+
    
    private void Update() 
    {
@@ -41,6 +44,7 @@ public class InspectRaycast : MonoBehaviour
                 if(Input.GetMouseButtonDown(0))
                 {
                     StartCoroutine(LevelChange());
+                    //LoadNextLevel();
                     //raycastedObj.ShowExtraInfo();
                     //FindObjectOfType<Audio Manager>().Play("ShannonMitchBaseball");   
                 }
