@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class InspectRaycast : MonoBehaviour
 {
@@ -39,9 +40,9 @@ public class InspectRaycast : MonoBehaviour
 
                 if(Input.GetMouseButtonDown(0))
                 {
-                    raycastedObj.ShowExtraInfo();
-                    // Play Shannon Audio clip
-                    FindObjectOfType<AudioManager>().Play("ShannonMitchBaseball");  
+                    StartCoroutine(LevelChange());
+                    //raycastedObj.ShowExtraInfo();
+                    //FindObjectOfType<Audio Manager>().Play("ShannonMitchBaseball");   
                 }
             }
         }
@@ -67,5 +68,15 @@ public class InspectRaycast : MonoBehaviour
             crosshair.color = Color.white;
             isCrosshairActive = false;
         }
+   }
+
+   IEnumerator LevelChange()
+   {
+        raycastedObj.ShowExtraInfo();
+        FindObjectOfType<AudioManager>().Play("ShannonMitchBaseball");
+
+        yield return new WaitForSeconds(15);
+
+        SceneManager.LoadScene(1);
    }
 }
