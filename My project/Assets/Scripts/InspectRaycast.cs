@@ -17,15 +17,10 @@ public class InspectRaycast : MonoBehaviour
    
    private bool doOnce;
 
-  //public LevelLoader levelloader;
+   public PlayerMovement playerMovementScript;
+   public MouseLook mouseLookScript;
 
-  void Start() 
-  {
-    //levelloader.LoadNextLevel();
-  }
-
-   
-   private void Update() 
+  private void Update() 
    {
         
         RaycastHit hit;
@@ -82,6 +77,8 @@ public class InspectRaycast : MonoBehaviour
    {
         raycastedObj.ShowExtraInfo();
         FindObjectOfType<AudioManager>().Play("ShannonMitchBaseball");
+        playerMovementScript.canMove = false;
+        mouseLookScript.canLook = false;
 
         yield return new WaitForSeconds(8);
 
