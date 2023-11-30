@@ -849,6 +849,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   crosshair: {fileID: 1604433718}
+  levelloader: {fileID: 6789546965583415951}
 --- !u!1 &994674583
 GameObject:
   m_ObjectHideFlags: 0
@@ -2615,6 +2616,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b43ff2a51d31f624988c2ec0efea42a2, type: 3}
+--- !u!114 &6789546965583415951 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5474122864216671091, guid: b43ff2a51d31f624988c2ec0efea42a2, type: 3}
+  m_PrefabInstance: {fileID: 6789546965583415950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474998a98cef15c47b42ade5f3c1a688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

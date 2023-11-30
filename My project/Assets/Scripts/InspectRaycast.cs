@@ -17,7 +17,12 @@ public class InspectRaycast : MonoBehaviour
    
    private bool doOnce;
 
-   LevelLoader levelLoaderScript;
+  //public LevelLoader levelloader;
+
+  void Start() 
+  {
+    //levelloader.LoadNextLevel();
+  }
 
    
    private void Update() 
@@ -44,7 +49,6 @@ public class InspectRaycast : MonoBehaviour
                 if(Input.GetMouseButtonDown(0))
                 {
                     StartCoroutine(LevelChange());
-                    //LoadNextLevel();
                     //raycastedObj.ShowExtraInfo();
                     //FindObjectOfType<Audio Manager>().Play("ShannonMitchBaseball");   
                 }
@@ -79,7 +83,7 @@ public class InspectRaycast : MonoBehaviour
         raycastedObj.ShowExtraInfo();
         FindObjectOfType<AudioManager>().Play("ShannonMitchBaseball");
 
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(8);
 
         SceneManager.LoadScene(1);
    }
