@@ -17,6 +17,8 @@ public class InspectRaycast : MonoBehaviour
    
    private bool doOnce;
 
+   public bool keepRepeating = true;
+
    public PlayerMovement playerMovementScript;
    public MouseLook mouseLookScript;
 
@@ -44,8 +46,7 @@ public class InspectRaycast : MonoBehaviour
                 if(Input.GetMouseButtonDown(0))
                 {
                     StartCoroutine(LevelChange());
-                    //raycastedObj.ShowExtraInfo();
-                    //FindObjectOfType<Audio Manager>().Play("ShannonMitchBaseball");   
+                    //keepRepeating = false;   
                 }
             }
         }
@@ -80,8 +81,8 @@ public class InspectRaycast : MonoBehaviour
         playerMovementScript.canMove = false;
         mouseLookScript.canLook = false;
 
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(3);
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
    }
 }
