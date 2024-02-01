@@ -5,14 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - InteractObject
+  - Footsteps/Grass
+  - Footsteps/Metal
+  - Footsteps/Wood
+  - Footsteps/Concrete
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - Interact
   - Water
   - UI
-  - Interact
+  - 
   - 
   - 
   - 
