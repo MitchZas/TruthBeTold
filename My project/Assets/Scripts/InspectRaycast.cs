@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
+using TransitionsPlus;
 
 public class InspectRaycast : MonoBehaviour
 {
@@ -19,12 +20,13 @@ public class InspectRaycast : MonoBehaviour
 
    public bool keepRepeating = true;
 
-   public PlayerMovement playerMovementScript;
-   public MouseLook mouseLookScript;
+   public FirstPersonController firstPersonControllerScript;
 
+   public Texture2D picture;
+
+  
   private void Update() 
    {
-        
         RaycastHit hit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
@@ -78,11 +80,12 @@ public class InspectRaycast : MonoBehaviour
    {
         raycastedObj.ShowExtraInfo();
         FindObjectOfType<AudioManager>().Play("ShannonMitchBaseball");
-        playerMovementScript.canMove = false;
-        mouseLookScript.canLook = false;
+        firstPersonControllerScript.canMove = false;
+        //mouseLookScript.canLook = false;
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
 
-        SceneManager.LoadScene(2);
+        TransitionAnimator.Start(TransitionType.Wipe, texture: picture, sceneNameToLoad: "Level2");
+        //SceneManager.LoadScene(2);
    }
 }
