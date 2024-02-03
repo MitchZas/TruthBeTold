@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f9d22fa85eb43e8af60b22fb69c43c, type: 3}
   m_Name: PaperTransition
   m_EditorClassIdentifier: 
-  type: 20
+  type: 21
   invert: 0
   timeMultiplier: 1
-  colorMode: 2
-  color: {r: 0, g: 0, b: 0, a: 1}
+  colorMode: 0
+  color: {r: 1, g: 1, b: 1, a: 1}
   gradient:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}
@@ -52,7 +52,7 @@ MonoBehaviour:
   duration: 2
   noiseIntensity: 1
   vignetteIntensity: 1
-  toonGradientIntensity: 50
+  toonGradientIntensity: 84
   toonDotIntensity: 0
   toonDotRadius: 0.333
   toonDotCount: 32

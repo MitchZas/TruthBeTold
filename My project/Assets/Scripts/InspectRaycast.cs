@@ -85,7 +85,7 @@ public class InspectRaycast : MonoBehaviour
 
         yield return new WaitForSeconds(5);
 
-        TransitionAnimator.Start(TransitionType.Wipe, texture: picture, sceneNameToLoad: "Level2");
+        TransitionAnimator.Start(TransitionType.DoubleWipe, vignetteIntensity: .45f, color: Color.white, sceneNameToLoad: "Level2");
         //SceneManager.LoadScene(2);
    }
 }
