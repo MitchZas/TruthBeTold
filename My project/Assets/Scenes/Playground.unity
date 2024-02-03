@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 831102147}
   - component: {fileID: 831102145}
   - component: {fileID: 831102149}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Cylinder (1)
   m_TagString: InteractObject
   m_Icon: {fileID: 0}
@@ -2868,7 +2868,7 @@ GameObject:
   - component: {fileID: 2125797924}
   - component: {fileID: 2125797923}
   - component: {fileID: 2125797927}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: InteractObject
   m_Icon: {fileID: 0}
