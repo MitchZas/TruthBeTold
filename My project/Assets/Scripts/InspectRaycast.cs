@@ -9,6 +9,9 @@ using TransitionsPlus;
 
 public class InspectRaycast : MonoBehaviour
 {
+   public GameObject baseball;
+   public GameObject cylinder;
+   
    [SerializeField] private int rayLength = 5;
    [SerializeField] private LayerMask layerMaskInteract;
    private ObjectController raycastedObj;
@@ -24,6 +27,12 @@ public class InspectRaycast : MonoBehaviour
 
    public Texture2D picture;
 
+  
+private void Start() 
+{
+   baseball = GameObject.Find("Baseball");
+   cylinder = GameObject.Find("Cylinder");
+}
   
   private void Update() 
    {
@@ -79,13 +88,20 @@ public class InspectRaycast : MonoBehaviour
    IEnumerator LevelChange()
    {
         raycastedObj.ShowExtraInfo();
-        FindObjectOfType<AudioManager>().Play("ShannonMitchBaseball");
+        
+        if(baseball)
+        {
+            FindObjectOfType<AudioManager>().Play("ShannonMitchBaseball");
+        }
+        else if (cylinder)
+        {
+            FindObjectOfType<AudioManager>().Play("CylinderSound");
+        }
+        
         firstPersonControllerScript.canMove = false;
-        //mouseLookScript.canLook = false;
 
         yield return new WaitForSeconds(5);
 
         TransitionAnimator.Start(TransitionType.DoubleWipe, vignetteIntensity: .45f, color: Color.white, sceneNameToLoad: "Level2");
-        //SceneManager.LoadScene(2);
    }
 }
