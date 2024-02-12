@@ -11,6 +11,9 @@ public class InspectRaycast : MonoBehaviour
 {
    public GameObject baseball;
    public GameObject cylinder;
+   public GameObject box;
+
+
    
    [SerializeField] private int rayLength = 5;
    [SerializeField] private LayerMask layerMaskInteract;
@@ -32,6 +35,7 @@ private void Start()
 {
    baseball = GameObject.Find("Baseball");
    cylinder = GameObject.Find("Cylinder");
+   box = GameObject.Find("Box");
 }
   
   private void Update() 
@@ -89,13 +93,18 @@ private void Start()
    {
         raycastedObj.ShowExtraInfo();
         
-        if(baseball)
+        if(raycastedObj.gameObject.name == baseball.name)
         {
             FindObjectOfType<AudioManager>().Play("ShannonMitchBaseball");
         }
-        else if (cylinder)
+        else if (raycastedObj.gameObject.name == cylinder.name)
         {
             FindObjectOfType<AudioManager>().Play("CylinderSound");
+        }
+
+        else if (raycastedObj.gameObject.name == box.name)
+        {
+            FindObjectOfType<AudioManager>().Play("BoxTest");
         }
         
         firstPersonControllerScript.canMove = false;
