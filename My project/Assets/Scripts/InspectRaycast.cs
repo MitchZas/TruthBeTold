@@ -9,11 +9,11 @@ using TransitionsPlus;
 
 public class InspectRaycast : MonoBehaviour
 {
+   // Try having these as private and finding them in the inspector
+   // Get rid of the GameObject.Find in the start method
    public GameObject baseball;
    public GameObject cylinder;
    public GameObject box;
-
-
    
    [SerializeField] private int rayLength = 5;
    [SerializeField] private LayerMask layerMaskInteract;
@@ -93,6 +93,7 @@ private void Start()
    {
         raycastedObj.ShowExtraInfo();
         
+        // Could do the same thing with the audio and find these in the inspector 
         if(raycastedObj.gameObject.name == baseball.name)
         {
             FindObjectOfType<AudioManager>().Play("ShannonMitchBaseball");
