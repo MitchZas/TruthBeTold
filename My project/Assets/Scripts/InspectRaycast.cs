@@ -9,11 +9,10 @@ using TransitionsPlus;
 
 public class InspectRaycast : MonoBehaviour
 {
-   // Try having these as private and finding them in the inspector
-   // Get rid of the GameObject.Find in the start method
-   public GameObject baseball;
-   public GameObject cylinder;
-   public GameObject box;
+   /////// OBJECT INTERACT ////////////
+   [SerializeField] GameObject baseball;
+   [SerializeField] GameObject cylinder;
+   [SerializeField] GameObject box;
    
    [SerializeField] private int rayLength = 5;
    [SerializeField] private LayerMask layerMaskInteract;
@@ -29,13 +28,13 @@ public class InspectRaycast : MonoBehaviour
    public FirstPersonController firstPersonControllerScript;
 
    public Texture2D picture;
-
+   /////// OBJECT INTERACT ////////////
   
 private void Start() 
 {
-   baseball = GameObject.Find("Baseball");
-   cylinder = GameObject.Find("Cylinder");
-   box = GameObject.Find("Box");
+   //baseball = GameObject.Find("Baseball");
+   //cylinder = GameObject.Find("Cylinder");
+   //box = GameObject.Find("Box");
 }
   
   private void Update() 
@@ -52,7 +51,6 @@ private void Start()
                     raycastedObj = hit.collider.gameObject.GetComponent<ObjectController>();
                     raycastedObj.ShowObjectName();
                     CrosshairChange(true);
-                    
                 }
 
                 isCrosshairActive = true;

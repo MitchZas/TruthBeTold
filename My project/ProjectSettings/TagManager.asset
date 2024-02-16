@@ -9,6 +9,8 @@ TagManager:
   - Footsteps/Metal
   - Footsteps/Wood
   - Footsteps/Concrete
+  - Door
+  - InteractiveObject
   layers:
   - Default
   - TransparentFX
