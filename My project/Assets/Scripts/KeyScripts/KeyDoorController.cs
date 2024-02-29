@@ -40,6 +40,13 @@ namespace KeySystem
             {
                 //OpenDoor();
                 Debug.Log("Door is open!");
+                Destroy(gameObject);
+            }
+
+            else if (_keyInventory.hasGreenKey)
+            {
+                //OpenDoor();
+                Debug.Log("Door is open!");
             }
             else
             {
