@@ -10,6 +10,8 @@ namespace KeySystem
         private Animator doorAnim;
         private bool doorOpen = false;
 
+        [SerializeField] private GameObject greenDoor;
+
         [Header("Animation Names")]
         [SerializeField] private string openAnimationName = "DoorOpen";
         [SerializeField] private string closeAnimationName = "DoorClose";
